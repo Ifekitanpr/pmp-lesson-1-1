@@ -633,7 +633,7 @@ footer {
   content: "";
 }
 .section-label {
-  max-width: 1400px;
+  max-width: 1180px;
   height: auto;
   margin: auto;
   padding: 22px 34px 14px;
@@ -641,7 +641,7 @@ footer {
   font-weight: 900;
 }
 .tabs {
-  max-width: 1400px;
+  max-width: 1180px;
   height: auto;
   margin: auto;
   grid-template-columns: repeat(6, 1fr);
