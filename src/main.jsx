@@ -86,24 +86,6 @@ const sections = [
     title: <>What You’ll See Next</>,
     image: solutionMindset,
   },
-  {
-    tab: "Sarah’s campaign",
-    eyebrow: "CASE STUDY · LAUNCHING A DIGITAL MARKETING CAMPAIGN",
-    title: <>Launching a Digital Marketing Campaign</>,
-    image: sarahCampaign,
-  },
-  {
-    tab: "Adapt the strategy",
-    eyebrow: "STRATEGY ADAPTATION",
-    title: <>Strategy Adaptation:</>,
-    image: campaignStrategy,
-  },
-  {
-    tab: "Outcome & exam lens",
-    eyebrow: "CASE STUDY · OUTCOME",
-    title: <>Outcome:</>,
-    image: campaignOutcome,
-  },
 ];
 
 const sectionTabs = [
@@ -111,11 +93,9 @@ const sectionTabs = [
   "What makes a project",
   "When plans change",
   "The mindset",
-  "Sarah’s campaign",
-  "Adapt & learn",
 ];
-const pageSection = [0, 1, 2, 3, 3, 3, 4, 5, 5];
-const sectionStartPage = [0, 1, 2, 3, 6, 7];
+const pageSection = [0, 1, 2, 3, 3, 3];
+const sectionStartPage = [0, 1, 2, 3];
 
 const everyday = [
   { icon: PartyPopper, title: "A birthday party" },
@@ -845,10 +825,6 @@ function App() {
   const [outline, setOutline] = useState(false);
   const [challengeReveal, setChallengeReveal] = useState(false);
   const [mindsetRead, setMindsetRead] = useState(new Set());
-  const [caseReveal, setCaseReveal] = useState(false);
-  const [strategyRead, setStrategyRead] = useState(new Set());
-  const [checked, setChecked] = useState(false);
-  const [checkOpen, setCheckOpen] = useState(false);
   const eligible = [
     completed.has(0),
     true,
@@ -856,9 +832,6 @@ function App() {
     true,
     mindsetRead.size === 4,
     true,
-    caseReveal,
-    strategyRead.size === 3,
-    checked,
   ];
   const goNext = () => {
     if (!eligible[current]) return;
@@ -878,14 +851,6 @@ function App() {
     <MindsetIntro />,
     <MindsetPractice read={mindsetRead} setRead={setMindsetRead} />,
     <WhatsNext />,
-    <CaseStudy revealed={caseReveal} setRevealed={setCaseReveal} />,
-    <Strategy read={strategyRead} setRead={setStrategyRead} />,
-    <Outcome
-      checked={checked}
-      setChecked={setChecked}
-      checkOpen={checkOpen}
-      setCheckOpen={setCheckOpen}
-    />,
   ];
   return (
     <div className="app">
