@@ -93,9 +93,11 @@ const sectionTabs = [
   "What makes a project",
   "When plans change",
   "The mindset",
+  "Mindset means",
+  "What’s next",
 ];
-const pageSection = [0, 1, 2, 3, 3, 3];
-const sectionStartPage = [0, 1, 2, 3];
+const pageSection = [0, 1, 2, 3, 4, 5];
+const sectionStartPage = [0, 1, 2, 3, 4, 5];
 
 const everyday = [
   { icon: PartyPopper, title: "A birthday party" },
